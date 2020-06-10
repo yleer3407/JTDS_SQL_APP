@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText edtxt;
     private View btnTest;
     private View btnClean;
     private TextView tvTestResult;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnTest=findViewById(R.id.btnTestSql);
         btnClean=findViewById(R.id.btnClean);
+        edtxt = findViewById(R.id.editSearch);
         tvTestResult = (TextView)findViewById(R.id.tvTestResult);
 
         btnTest.setOnClickListener(getClickEvent());
@@ -46,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run()
             {
-                String ret = DBUtil.QuerySQL();
+                String strEdt = "";
+                strEdt = edtxt.getText().toString();
+                String ret = DBUtil.QuerySQL(strEdt);
                 Message msg = new Message();
                 msg.what=1001;
                 Bundle data = new Bundle();

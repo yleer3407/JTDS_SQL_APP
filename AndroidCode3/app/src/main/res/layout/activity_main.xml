@@ -4,21 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <Button
-        android:id="@+id/btnTestSql"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/testSQL"/>
-    <Button
-        android:id="@+id/btnClean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="@string/clean"/>
+    <RelativeLayout
+        android:id="@+id/loutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clean"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnClean"/>
+        <Button
+            android:id="@+id/btnTestSql"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btnClean"
+            android:padding="10dp"
+            android:text="@string/testSQL" />
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/btnTestSql"
+            android:textColor="#000000"
+            />
+
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnClean">
+        android:layout_below="@id/loutSearch">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

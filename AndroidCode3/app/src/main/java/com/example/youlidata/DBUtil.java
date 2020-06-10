@@ -1,5 +1,7 @@
 package com.example.youlidata;
 
+import android.widget.EditText;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,14 +28,14 @@ public class DBUtil
         return con;
     }
 
-    public static String QuerySQL()
+    public static String QuerySQL( String str)
     {
         String result = "";
         int count = 1;
         try
         {
             Connection conn = getSQLConnection("175.24.20.254", "sa", "Yelei193", "YouliData");
-            String sql = "select * from flow";
+            String sql = "SELECT * FROM flow WHERE flo_num LIKE '%"+ str +"%'or flo_state LIKE '%"+str+"%'or flo_client LIKE '%"+str+"%'or flo_factory LIKE '%"+str+"%'or flo_coding LIKE '%"+str+"%'or flo_cilentID LIKE '%"+str+"%'or flo_model LIKE '%"+str+"%'or flo_logo LIKE '%"+str+"%'or flo_proname LIKE '%"+str+"%'" ;
             Statement stmt = conn.createStatement();//
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next())
@@ -141,5 +143,6 @@ public class DBUtil
 
     public static void main(String[] args)
     {
-        QuerySQL();
-    } }
+       // QuerySQL(str);
+    }
+}
