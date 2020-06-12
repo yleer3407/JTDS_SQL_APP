@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        Youlikey {
+            storeFile file('E:\\Youliapp.jks')
+            storePassword 'Yelei193'
+            keyAlias = 'Youlidatakey1'
+            keyPassword 'Yelei193'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
@@ -15,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.Youlikey
         }
     }
 }
