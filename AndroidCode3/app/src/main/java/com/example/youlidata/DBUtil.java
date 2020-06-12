@@ -34,7 +34,7 @@ public class DBUtil
         int count = 1;
         try
         {
-            Connection conn = getSQLConnection("175.24.20.254", "sa", "Yelei193", "YouliData");
+            Connection conn = getSQLConnection("124.70.203.134", "sa", "Yelei193", "YouliData");
             String sql = "SELECT * FROM flow WHERE flo_num LIKE '%"+ str +"%'or flo_state LIKE '%"+str+"%'or flo_client LIKE '%"+str+"%'or flo_factory LIKE '%"+str+"%'or flo_coding LIKE '%"+str+"%'or flo_cilentID LIKE '%"+str+"%'or flo_model LIKE '%"+str+"%'or flo_logo LIKE '%"+str+"%'or flo_proname LIKE '%"+str+"%'" ;
             Statement stmt = conn.createStatement();//
             ResultSet rs = stmt.executeQuery(sql);
