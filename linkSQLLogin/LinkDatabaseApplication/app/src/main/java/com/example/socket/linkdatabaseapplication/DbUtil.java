@@ -120,7 +120,6 @@ public class DbUtil {
                     String s41 = resultSet.getString("flo_out");
                     String s42 = resultSet.getString("flo_finish");
 
-
                     //将得到的数据存放到类中，然后存放到List中
                     typeLocationList.add(new EnviromentQrder("【订单序号】："+count,"【订单状态】："+s1,"【客户】：" + s2,"【工厂】：" +s3,"【制令单号】：" +s4,
                             "【订单临时变更】："+s5, "【产品编号】：" +s6,"【客户编号】" +s7,"【客户机型】： " +s8,"【LOGO】 ： " +s9,"【工厂机型】：" +s10,

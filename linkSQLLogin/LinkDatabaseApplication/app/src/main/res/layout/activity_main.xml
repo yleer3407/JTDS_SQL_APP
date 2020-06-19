@@ -34,7 +34,8 @@
         android:divider="@drawable/deliver"
         android:background="#ffffff"
         android:scrollbars="vertical"
-        android:dividerHeight="1dp"
+        android:dividerHeight="20dp"
+
 
        />
 
