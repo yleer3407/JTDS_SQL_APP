@@ -17,7 +17,7 @@ import static com.example.socket.linkdatabaseapplication.DbUtil.typeLocationList
 /*
   --------------------------------------数据查询显示在页面上---------------------------------
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private ListView list;
     private final int GETDATA=0;
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
 
 
     @Override
@@ -53,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         list=(ListView)findViewById(R.id.list);
     }
+
+
+
+
     //----------------------------去数据库加载数据-------------------------
     private class DownloadDataThread extends Thread{
         EditText edSearch = findViewById(R.id.editSearch);

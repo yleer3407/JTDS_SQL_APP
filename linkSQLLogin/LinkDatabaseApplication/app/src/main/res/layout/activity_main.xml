@@ -19,13 +19,13 @@
             android:layout_alignParentRight="true"
             android:padding="10dp"
             android:text="@string/testSQL" />
+
         <EditText
             android:id="@+id/editSearch"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_toLeftOf="@id/btnTestSql"
-            android:textColor="#000000"
-            />
+            android:textColor="#000000" />
     </RelativeLayout>
     <ListView
         android:id="@+id/list"
@@ -35,8 +35,6 @@
         android:background="#ffffff"
         android:scrollbars="vertical"
         android:dividerHeight="20dp"
-
-
        />
 
 </LinearLayout>
