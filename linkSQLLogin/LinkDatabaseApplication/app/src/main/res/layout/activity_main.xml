@@ -14,12 +14,19 @@
 
         <Button
             android:id="@+id/btnTestSql"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/btnScan"
             android:padding="10dp"
             android:text="@string/testSQL" />
 
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/sys"
+            android:padding="10dp" />
         <EditText
             android:id="@+id/editSearch"
             android:layout_width="match_parent"
