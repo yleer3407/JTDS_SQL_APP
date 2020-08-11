@@ -16,17 +16,31 @@
             android:id="@+id/btnTestSql"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_toLeftOf="@id/btnScan"
+            android:layout_toLeftOf="@id/layout"
             android:padding="10dp"
-            android:text="@string/testSQL" />
-
+            android:text="@string/testSQL"
+            android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
         <Button
             android:id="@+id/btnScan"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:background="@mipmap/sys"
+            android:background="@mipmap/qr2"
+            android:layout_gravity="center_horizontal"
             android:padding="10dp" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="扫一扫"/>
+    </LinearLayout>
+
         <EditText
             android:id="@+id/editSearch"
             android:layout_width="match_parent"
@@ -42,6 +56,8 @@
         android:background="#ffffff"
         android:scrollbars="vertical"
         android:dividerHeight="20dp"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
        />
 
 </LinearLayout>
