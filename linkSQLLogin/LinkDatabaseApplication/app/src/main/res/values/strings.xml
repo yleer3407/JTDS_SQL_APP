@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">优力订单</string>
+    <string name="app_name">优尚订单</string>
     <string name="clean">清除数据</string>
     <string name="testSQL">查询数据</string>
     <string name="app_picker_name">Applications</string>

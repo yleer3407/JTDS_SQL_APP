@@ -40,7 +40,7 @@ public class DbUtil {
         try
         {
             //要想连接数据库必须导入相应的包在libs中（jtds-1.2.7.jar和sqljdbc.jar）
-            connection= getSQLConnection("124.70.203.134", "sa", "Yelei193", "YouliData");//连接数据库，修改为自己的，这个ip地址你们连不上。
+            connection= getSQLConnection("124.70.203.134", "sa", "Yelei193", "YoushangData");//连接数据库，修改为自己的，这个ip地址你们连不上。
             String sql = "select userID from userAdmin   where  userID=? and  userPwd=?"; //查询语句
             PreparedStatement stat = connection.prepareStatement(sql);//得到PreparedStatement对象
             stat.setString(1, name);//给占位符设置上内容
@@ -67,7 +67,7 @@ public class DbUtil {
         synchronized (this){
             try {
 
-                connection=getSQLConnection("124.70.203.134", "sa", "Yelei193", "YouliData");
+                connection=getSQLConnection("124.70.203.134", "sa", "Yelei193", "YoushangData");
 
                 String sql = "SELECT * FROM flow WHERE flo_num LIKE '%"+ str +"%'or flo_state LIKE '%"+str+"%'or flo_client LIKE '%"+str+"%'or flo_factory LIKE '%"+str+"%'or flo_coding LIKE '%"+str+"%'or flo_cilentID LIKE '%"+str+"%'or flo_model LIKE '%"+str+"%'or flo_logo LIKE '%"+str+"%'or flo_proname LIKE '%"+str+"%'" ;
                 PreparedStatement preparedStatement=connection.prepareStatement(sql);
