@@ -18,13 +18,15 @@
         android:text="1"
         android:background="#00FA9A"
         android:textStyle="bold"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t3"
         android:layout_width="wrap_content"
@@ -200,73 +202,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+       />
     <TextView
         android:id="@+id/t34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+       />
     <TextView
         android:id="@+id/t41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
     <TextView
         android:id="@+id/t42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
 
 
 

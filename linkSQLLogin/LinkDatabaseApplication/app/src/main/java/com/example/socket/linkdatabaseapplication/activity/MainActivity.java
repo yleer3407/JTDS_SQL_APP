@@ -13,12 +13,14 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.socket.linkdatabaseapplication.DbUtil;
+import com.example.socket.linkdatabaseapplication.EnviromentQrder;
 import com.example.socket.linkdatabaseapplication.MyAdapter;
 import com.example.socket.linkdatabaseapplication.R;
 import com.example.socket.linkdatabaseapplication.zxing.android.CaptureActivity;
@@ -58,6 +60,18 @@ public class MainActivity extends AppCompatActivity  {
 
         btnscan.setOnClickListener(getClickEvent());
         btnSearch.setOnClickListener(getClickEvent());
+        ListView listView = findViewById(R.id.list);
+        //µã»÷¶¨Î»
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                EnviromentQrder enviromentQrder=typeLocationList.get(position);
+//                Toast.makeText(MainActivity.this,enviromentQrder.getNum(),Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtra("floNum",enviromentQrder.getNum());
+                startActivity(intent);
+            }
+        });
     }
 
     private View.OnClickListener getClickEvent() {

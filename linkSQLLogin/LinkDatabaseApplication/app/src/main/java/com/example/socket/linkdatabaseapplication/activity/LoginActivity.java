@@ -30,17 +30,18 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        init();
+        init();                         //页面初始化
         WorkThread wt=new WorkThread();
-        wt.start();//调动子线程
+        wt.start();                     //调动子线程
     }
 
     private void init() {
         context =LoginActivity.this;
-       user= (EditText)findViewById(R.id.user);
-       password= (EditText)findViewById(R.id.password);
-       cancel= (Button)findViewById(R.id.cancel);
-       login= (Button)findViewById(R.id.login);
+        user= (EditText)findViewById(R.id.user);
+        password= (EditText)findViewById(R.id.password);
+        cancel= (Button)findViewById(R.id.cancel);
+        login= (Button)findViewById(R.id.login);
+
         cancel.setOnClickListener(this);
         login.setOnClickListener(this);
     }
@@ -57,6 +58,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             case R.id.login:
                 user_tv=user.getText().toString().trim();
                 password_tv=password.getText().toString().trim();
+
                 Message m=handler.obtainMessage();//获取事件
                 Bundle b=new Bundle();
                 b.putString("name",user_tv);
@@ -64,7 +66,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 m.setData(b);
                 m.what=0;
                 handler.sendMessage(m);//把信息放到通道中
-
                 break;
         }
     }
